@@ -1,0 +1,20 @@
+first_name = input("What is your name?")
+last_name = input("What is your last name?")
+age1 = int(input("How old are you?"))
+dob1 = int(input("What year were you born?"))
+if age1 < 18 or dob1 > 2002:
+    print("You can't go out, it's too dangerous! Stay at home and watch a movie.")
+elif age1 < 18 and dob1 < 2002:
+    print("You can't go out, it's too dangerous! Stay at home and watch a movie.")
+elif age1 > 18 and dob1 > 2002:
+    print("You can't go out, it's too dangerous! Stay at home and watch a movie.")
+else:
+    print("You can go outside, have fun!")
+list1 = (first_name,last_name,age1,dob1)
+print("Info:", list1)
+#or
+i=0
+while (i< len(list1)):
+    print(i,list1[i])
+    i+=1
+
