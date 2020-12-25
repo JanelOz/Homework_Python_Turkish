@@ -1,0 +1,19 @@
+import random as rnd
+word_list1 = ["apple","Banana","orange"]
+def randomWord(wor_list1):
+
+    word1 = randomWord(word_list1)
+check = False
+name = input("Let's play hangman. Please enter your name: ")
+print("Welcome", name)
+for x in range (3):
+    guess = input("Please enter a word:")
+    if guess == word_list1:
+        print("You got it! Congrats!")
+        check = True
+        break
+    else:
+        print("Please try again!")
+
+if not check:
+    print(name, "Game is over, exit the game!")
