@@ -1,0 +1,61 @@
+# Student Management System:
+import random
+i=0
+name = input("First name : ")
+lastname = input("Last name : ")
+while i<3:
+    Check_name = input("Please enter your name : ")
+    Check_lastname = input("Please enter your last name : ")
+
+    if (Check_name == name and Check_lastname==lastname):
+        print("Welcome:", name + str(", ") + lastname)
+        break
+    else:
+        print("Please Try Again!")
+    i+=1
+if(i==3):
+    print("Failed!")
+
+#Course
+courses = {1:"Math", 2:"History", 3:"English", 4:"Biology", 5:"Chemistry"}
+print(courses)
+class Course():
+    def __init__(self, course_name):
+        self.course_name = course_name
+        self.midterm = 0
+        self.final = 0
+        self.project = 0
+        self.final_score = 0
+
+    def set_grades(self, midterm, final, project):
+        self.midterm = midterm
+        self.final = final
+        self.project = project
+        self.calculate_grades()
+
+    def calculate_grades(self):
+        self.final_score = self.midterm * 0.3 + self.final * 0.5 + self.project * 0.2
+
+    def course_result(self):
+        if 89 < self.final_score:
+            letter_grade = "AA"
+        elif 69 < self.final_score < 90:
+            letter_grade = "BB"
+        elif 49 < self.final_score < 70:
+            letter_grade = "CC"
+        elif 29 < self.final_score < 50:
+            letter_grade = "DD"
+        elif self.final_score < 30:
+            letter_grade = "FF"
+
+        print("Your course result is {}({})".format(letter_grade, self.final_score))
+        if letter_grade == 'FF':
+            print("Sorry, you failed")
+        else:
+            print("Congratulations, you passed the {} course".format(self.course_name))
+def __retr__(self):
+        pass
+def __str__(self):
+        result = "\nCourse Name: {}\nYour grades\n{}\nMidterm: {}\nFinal: {}\nProject: {}\n{}\nYour Final Score: {}\n".format(
+            self.course_name, "-" * 11, self.midterm, self.final, self.project, "-" * 11, self.final_score)
+        return result
